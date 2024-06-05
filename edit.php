@@ -5,7 +5,7 @@
     {
         $id = $_GET['id'];
         $sqlSelect = "SELECT * FROM usuarios WHERE id=$id";
-        $result = $conexao->query($sqlSelect);
+        $result = $conn->query($sqlSelect);
         if($result->num_rows > 0)
         {
             while($user_data = mysqli_fetch_assoc($result))
@@ -15,7 +15,7 @@
                 $email = $user_data['email'];
                 $telefone = $user_data['telefone'];
                 $sexo = $user_data['sexo'];
-                $data_nasc = $user_data['data_nasc'];
+                $data_nasc = $user_data['data_nascimento'];
                 $cidade = $user_data['cidade'];
                 $estado = $user_data['estado'];
                 $endereco = $user_data['endereco'];
